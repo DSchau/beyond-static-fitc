@@ -1,0 +1,12 @@
+{
+  "name": "@dschau/fitc-presentation",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dustin Schau <dustinschau@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "demo",
+    "slides"
+  ]
+}

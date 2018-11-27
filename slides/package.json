@@ -1,0 +1,13 @@
+{
+  "name": "@dschau/fitc-slides",
+  "private": true,
+  "version": "1.0.0",
+  "main": "n/a",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck index.js"
+  },
+  "devDependencies": {
+    "mdx-deck": "^1.7.15"
+  }
+}
