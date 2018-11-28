@@ -1,12 +1,18 @@
 {
-  "name": "@dschau/fitc-presentation",
+  "name": "@dschau/fitc-slides",
   "private": true,
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "Dustin Schau <dustinschau@gmail.com>",
+  "main": "n/a",
   "license": "MIT",
-  "workspaces": [
-    "demo",
-    "slides"
-  ]
+  "scripts": {
+    "build": "mdx-deck build index.js",
+    "start": "mdx-deck index.js"
+  },
+  "devDependencies": {
+    "mdx-deck": "^1.7.15"
+  },
+  "dependencies": {
+    "react-icons": "^3.2.2",
+    "react-textfit": "^1.1.0"
+  }
 }
