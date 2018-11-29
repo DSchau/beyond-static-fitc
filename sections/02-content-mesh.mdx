@@ -1,10 +1,14 @@
+import { Code, Background, Invert, Vertical } from '../layouts'
+import { Box, Image } from '../components'
 import Fit from '../components/fit'
+
+export default Invert
 
 # Development has changed.
 
 ---
 
-## Frontend development has _never_ been better
+## JavaScript development has _never_ been better.
 
 ---
 
@@ -14,21 +18,59 @@ import Fit from '../components/fit'
 
 ---
 
+export default Background({ background: '#00d8ff', color: 'white' })
+
 <Fit>React</Fit>
 
 ---
+
+export default Code
+
+```jsx
+import React from 'react'
+
+export default function Waddup() {
+  return <h1>It's dat boi</h1>
+}
+```
+
+---
+
+export default Background({ background: '#e535ab', color: 'white' })
 
 <Fit>GraphQL</Fit>
 
 ---
 
-<Fit>Gatsby</Fit>
+export default Code
 
-## We'll come back to this
+```graphql
+{
+  repository(owner: "dschau", name: "spread-love") {
+    stargazers {
+      totalCount
+    }
+  }
+}
+```
 
 ---
 
-<Fit>These are tools developers <em>want</em> to use</Fit>
+export default Background({ background: '#6cc24a', color: 'white' })
+
+<Fit>Node.js</Fit>
+
+---
+
+export default Background({ background: '#663399', color: 'white' })
+
+<Fit>Gatsby</Fit>
+
+## We'll come back to this.
+
+---
+
+<Fit>These are tools developers <em>want</em> to use.</Fit>
 
 ---
 
@@ -36,8 +78,79 @@ import Fit from '../components/fit'
 
 ### And this sucks.
 
-### Badly.
+### A lot.
 
 ---
 
 > But we can't.
+
+---
+
+## This is changing.
+
+---
+
+## Excellent APIs are ubiqituous.
+
+---
+
+## Software as a Service = 🚀
+
+---
+
+export default Background({ background: '#eb5424', color: 'white' })
+
+<Fit>Auth0</Fit>
+
+---
+
+export default Background({ background: '#00afe1', color: 'white' })
+
+<Fit>Stripe</Fit>
+
+---
+
+export default Background({ background: '#96bf48', color: 'white' })
+
+<Fit>Shopify</Fit>
+
+---
+
+## The de-coupling of the CMS.
+
+### (even the CMS is going headless)
+
+---
+
+export default Vertical
+
+<Box background="#f76b1c">Contentful</Box>
+
+<Box background="#56ccf2">Strapi</Box>
+
+<Box background="red">TODO</Box>
+
+---
+
+## Static Site Generators are _so_ hot right now.
+
+### "Markup"
+
+---
+
+<Fit>JAMStack</Fit>
+
+## `J`avascript
+## `A`PIs
+## `M`arkup
+
+---
+
+<Image src="images/content-mesh.jpg">
+  <Fit>Introducing...</Fit>
+  <Fit>The Content Mesh</Fit>
+</Image>
+
+---
+
+## Leverage these excellent services.

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaGlobe, FaGithub, FaTwitter, FaGit } from 'react-icons/fa'
+import { FaGlobe, FaGithub, FaTwitter } from 'react-icons/fa'
 
 const Container = styled.div`
   display: flex;
@@ -41,14 +41,24 @@ const Image = styled.img`
   margin-left: 2rem;
 `;
 
+const Link = styled.a`
+  color: inherit;
+  text-decoration: none;
+`
+
+Link.defaultProps = {
+  rel: 'noopener noreferrer',
+  target: '_blank'
+}
+
 export default function Social() {
   return (
     <Container>
       <Row>
         <List>
-          <ListItem><FaTwitter /> schaudustin</ListItem>
-          <ListItem><FaGithub /> dschau</ListItem>
-          <ListItem><FaGlobe /> dustinschau.com</ListItem>
+          <ListItem><FaTwitter /> <Link href="https://twitter.com/schaudustin">schaudustin</Link></ListItem>
+          <ListItem><FaGithub /> <Link href="https://github.com/dschau">dschau</Link></ListItem>
+          <ListItem><FaGlobe /> <Link href="https://dustinschau.com">dustinschau.com</Link></ListItem>
         </List>
         <Image src="images/dustin-schau.png" />
       </Row>

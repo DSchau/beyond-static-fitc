@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
-import { FaExternalLinkSquareAlt } from 'react-icons/fa'
+import Particles from '@dschau/particles.js'
 
-import Fit from '../components/fit'
+import { Banner } from '../components'
+import { colors, particles } from '../constants'
 
 const Container = styled.div`
   display: flex;
@@ -10,32 +11,38 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  background-color: ${colors.gatsby};
+
   height: 100vh;
   width: 100vw;
 `
 
-const Banner = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const ParticlesContainer = styled.div`
   position: absolute;
+  top: 0;
+  right: 0;
   bottom: 0;
-  background-color: white;
-  color: black;
+  left: 0;
 
-  width: 100%;
-  padding: 1rem;
+  z-index: 0;
 `
 
-const LinkIcon = styled(FaExternalLinkSquareAlt)`
-  margin-right: 1rem;
-`
 
-export default function Title({ children }) {
-  return (
-    <Container>
-      <Banner><Fit max={48}><LinkIcon /> beyondstatic.dustinschau.com</Fit></Banner>
-      {children}
-    </Container>
-  )
+export default class Title extends Component {
+  static containerId = '__title_slide__'
+
+  componentDidMount() {
+    Particles(Title.containerId, particles)
+  }
+
+  render() {
+    const { children } = this.props;
+    return (
+      <Container>
+        <Banner />
+        <ParticlesContainer id={Title.containerId} />
+        {children}
+      </Container>
+    )
+  }
 }

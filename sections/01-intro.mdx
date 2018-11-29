@@ -1,16 +1,26 @@
 import { Title } from '../layouts'
+import { Head } from 'mdx-deck'
+
 import Fit from '../components/fit'
 import Social from '../components/social'
 
 export default Title
 
-<Fit caps={true}>Beyond Static</Fit>
-<Fit style={{ color: '#aaa' }}>with Gatsby, React, and GraphQL</Fit>
+<Fit caps={true} style={{ backgroundColor: 'black', color: 'white' }}>Beyond Static</Fit>
+<Fit style={{ color: 'rgba(255, 255, 255, 0.7)' }}>with Gatsby, React, and GraphQL</Fit>
+
+<Head>
+  <title>Beyond Static with Gatsby, React, and GraphQL</title>
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:site' content='@schaudustin' />
+  <meta name='twitter:title' content='Beyond Static with Gatsby, React, and GraphQL - FITC' />
+  <meta name='twitter:description' content='For most of us, “static sites” only work for simple sites, like personal blogs. But static sites can do so much more! In this talk, learn how Gatsby uses React and GraphQL to help you build apps that combine the performance and workflow benefits of static sites with the flexibility and power of server-driven sites, all in a modern dev stack!' />
+</Head>
 
 ### Dustin Schau
 
 ---
 
-<Fit>Who?</Fit>
+<Fit><code>whoami</code></Fit>
 
 <Social />
