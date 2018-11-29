@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Particles from '@dschau/particles.js'
 
 import { Banner } from '../components'
 import { colors, particles } from '../constants'
@@ -32,7 +31,10 @@ export default class Title extends Component {
   static containerId = '__title_slide__'
 
   componentDidMount() {
-    Particles(Title.containerId, particles)
+    import('@dschau/particles.js')
+      .then(({ default: Particles }) => {
+        Particles(Title.containerId, particles)
+      })
   }
 
   render() {
