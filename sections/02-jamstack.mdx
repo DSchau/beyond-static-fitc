@@ -1,21 +1,42 @@
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { Code, Background, Invert, Vertical } from '../layouts'
-import { Box, Image } from '../components'
-import Fit from '../components/fit'
+import { Box, Fit, Image } from '../components'
+import { colors } from '../constants'
+
 
 export default Invert
 
 # Development has changed.
 
+```notes
+- What I hope to convey in this talk is simple: Development has changed
+- By the end of this talk, I hope to make this clear
+- The quicker you adapt to this new methodology, the better off you will be.
+```
+
 ---
 
-## JavaScript development has _never_ been better.
+<Fit>JavaScript development has <em>never</em> been</Fit>
+<Fit caps={true} color={colors.accent}>better.</Fit>
+
+```notes
+- If you call yourself a frontend, node, or JavaScript developers
+- You can see this in the thriving ecosystem
+- The surge of excellent, helpful libraries and frameworks
+- Some have called this explosion JavaScript fatigue
+- I prefer to think of it as a JavaScript Renaissance
+- Change is scary, but change is also good.
+```
 
 ---
 
 ## We have _so_. _many_. _tools_.
 
 🔧
+
+```notes
+
+```
 
 ---
 
@@ -155,11 +176,39 @@ export default Vertical
 
 ---
 
-<Image src="images/content-mesh.jpg">
-  <Fit>Introducing...</Fit>
-  <Fit>The Content Mesh</Fit>
-</Image>
+<Fit>This is...</Fit>
+<Fit caps={true} color={colors.accent}>Fantastic</Fit>
 
 ---
 
-## Leverage these excellent services.
+## Developers can use the tools they want to use.
+
+- ✅ React
+- ✅ GraphQL
+- ✅ Node.js
+
+---
+
+<Fit>Use the <em>best</em> services.</Fit>
+<Fit>(and hey, less time spent re-implementing those services!)</Fit>
+
+---
+
+## Build UIs from these disparate, best-of-breed services and tools.
+
+---
+
+<Fit>But this also...</Fit>
+<Fit caps={true} color={colors.accent}>kind of sucks.</Fit>
+
+---
+
+## Performance can _easily_ degrade
+
+---
+
+## Complex business logic to combine data sources
+
+---
+
+## UIs can become tightly coupled to back-ends

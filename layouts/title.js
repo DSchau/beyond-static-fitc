@@ -41,7 +41,7 @@ export default class Title extends Component {
     const { children } = this.props;
     return (
       <Container>
-        <Banner />
+        <Banner twitter={true} />
         <ParticlesContainer id={Title.containerId} />
         {children}
       </Container>
