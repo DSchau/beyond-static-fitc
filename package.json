@@ -7,7 +7,7 @@
   "scripts": {
     "build": "mdx-deck build index.js",
     "postbuild": "npm run optimize",
-    "optimize": "if-env NETLIFY=true find images -type f -exec ./node_modules/.bin/sharp -i '{}' -o dist/'{}' --quality 70 \\; || echo \"Not CI\"",
+    "optimize": "if-env NETLIFY=true && find images -type f -exec ./node_modules/.bin/sharp -i '{}' -o dist/'{}' --quality 70 \\; || echo \"Not CI\"",
     "start": "mdx-deck index.js"
   },
   "devDependencies": {
