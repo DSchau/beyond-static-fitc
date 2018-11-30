@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaGlobe, FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaGlobe, FaGithub, FaTwitter, FaHome } from 'react-icons/fa'
+import { MdBusiness } from 'react-icons/md'
 
 const Container = styled.div`
   display: flex;
@@ -59,6 +60,8 @@ export default function Social() {
           <ListItem><FaTwitter /> <Link href="https://twitter.com/schaudustin">schaudustin</Link></ListItem>
           <ListItem><FaGithub /> <Link href="https://github.com/dschau">dschau</Link></ListItem>
           <ListItem><FaGlobe /> <Link href="https://dustinschau.com">dustinschau.com</Link></ListItem>
+          <ListItem><MdBusiness /> Gatsby</ListItem>
+          <ListItem><FaHome /> Omaha, Nebraska</ListItem>
         </List>
         <Image src="images/dustin-schau.png" />
       </Row>
