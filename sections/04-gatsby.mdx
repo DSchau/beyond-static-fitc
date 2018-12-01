@@ -1,5 +1,5 @@
 import { Background } from '../layouts'
-import { Airmail, Fit, Image } from '../components'
+import { Airmail, Fit, Grid, Image, Link } from '../components'
 import { colors } from '../constants'
 
 export default Background({ background: colors.gatsby, color: 'white' })
@@ -26,6 +26,31 @@ export default Background({ background: colors.gatsby, color: 'white' })
 
 ---
 
+## Perf. Acronyms
+
+<Grid cols={`33% 33% 33%`} children={[
+  'H/2',
+  'PRPL',
+  'RAIL',
+  'FLIP',
+  'SPA',
+  'SW',
+  'TTI',
+  'FMP',
+  'FCP',
+  'TTFP',
+  'PWA',
+  'TTFB'
+]} />
+
+---
+
+<Image src="https://media.giphy.com/media/l41YtZOb9EUABnuqA/giphy.gif" darken={0.5}>
+  <Fit>How many do you actually <em>know</em>?</Fit>
+</Image>
+
+---
+
 ## Deploy your content... wherever.
 
 (on the edge or the server in your basement)
@@ -38,11 +63,15 @@ export default Background({ background: colors.gatsby, color: 'white' })
 
 ---
 
+# 🙅‍♀️ 🙅‍♀️ 🙅‍♀️ 🙅‍♀️ 🙅‍♀️
+
+---
+
 <Fit>static assets !== static app</Fit>
 
 ---
 
-<Image src="https://www.meme-arsenal.com/memes/8d9bcd17d3c2acabf8695d294d06ee2a.jpg">
+<Image src="https://www.meme-arsenal.com/memes/8d9bcd17d3c2acabf8695d294d06ee2a.jpg" darken={0.5}>
   <Fit>What if I told you...</Fit>
   <Fit background="black">A Gatsby site is a React <em>application</em></Fit>
 </Image>

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Link = styled.a([], {
+const Link = styled.a([], props => ({
   color: 'inherit',
-  textDecoration: 'none'
-})
+  textDecoration: props.textDecoration || 'none'
+}))
 
 Link.defaultProps = {
   target: '_blank',
