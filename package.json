@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "mdx-deck build index.js",
-    "postbuild": "npm run optimize",
+    "postbuild": "npm run optimize && npm run build:pdf",
+    "build:pdf": "mdx-deck pdf deck.js",
     "preoptimize": "mkdir -p dist/images",
     "optimize": "if-env NETLIFY=true && find images -type f -exec ./node_modules/.bin/sharp -i '{}' -o dist/'{}' --quality 70 \\; || echo \"Not CI\"",
     "start": "mdx-deck index.js"
