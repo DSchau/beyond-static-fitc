@@ -31,10 +31,12 @@ export default class Title extends Component {
   static containerId = '__title_slide__'
 
   componentDidMount() {
-    import('@dschau/particles.js')
-      .then(({ default: Particles }) => {
-        Particles(Title.containerId, particles)
-      })
+    if (process.env.USE_PARTICLES !== false) {
+      import('@dschau/particles.js')
+        .then(({ default: Particles }) => {
+          Particles(Title.containerId, particles)
+        })
+    }
   }
 
   render() {

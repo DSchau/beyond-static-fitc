@@ -7,12 +7,13 @@
   "scripts": {
     "build": "mdx-deck build index.js",
     "postbuild": "npm run optimize && npm run build:pdf",
-    "build:pdf": "mdx-deck pdf deck.js",
+    "build:pdf": "cross-env USE_PARTICLES=false mdx-deck pdf index.js",
     "preoptimize": "mkdir -p dist/images",
     "optimize": "if-env NETLIFY=true && find images -type f -exec ./node_modules/.bin/sharp -i '{}' -o dist/'{}' --quality 70 \\; || echo \"Not CI\"",
     "start": "mdx-deck index.js"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "if-env": "^1.0.4",
     "mdx-deck": "^1.7.15",
     "sharp-cli": "^1.7.1"
