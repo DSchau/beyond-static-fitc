@@ -15,7 +15,7 @@ export default class extends React.Component {
           const shadowStyle = document.createElement('style')
           shadowStyle.innerHTML = `
             .Tweet-text {
-              font-size: 24px;
+              font-size: 30px;
             }
           `
           el.shadowRoot.appendChild(shadowStyle)
