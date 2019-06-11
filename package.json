@@ -9,13 +9,14 @@
     "postbuild": "npm run optimize && npm run build:pdf",
     "build:pdf": "cross-env USE_PARTICLES=false mdx-deck pdf index.js",
     "preoptimize": "mkdir -p dist/images",
-    "optimize": "if-env NETLIFY=true && find images -type f -exec ./node_modules/.bin/sharp -i '{}' -o dist/'{}' --quality 70 \\; || echo \"Not CI\"",
+    "optimize": "find images -type f -exec ./node_modules/.bin/sharp -i '{}' -o dist/'{}' --quality 70 \\;",
     "start": "mdx-deck index.js"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
     "if-env": "^1.0.4",
-    "mdx-deck": "^1.7.15"
+    "mdx-deck": "^1.7.15",
+    "sharp-cli": "^1.9.0"
   },
   "dependencies": {
     "@dschau/particles.js": "^2.0.0",
